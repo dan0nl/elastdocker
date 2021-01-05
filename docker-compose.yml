@@ -9,6 +9,9 @@ networks:
 # will contain all elasticsearch data.
 volumes:
   elasticsearch-data:
+    driver: local-persist
+    driver_opts:
+      mountpoint: /volume/storage/elastic_data 
 
 secrets:
   elasticsearch.keystore:
